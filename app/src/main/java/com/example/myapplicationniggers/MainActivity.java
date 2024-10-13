@@ -13,7 +13,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 private EditText X ;
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +21,10 @@ private EditText X ;
     }
     public  void changetext (View view) {
         X.setText(" my first class ");
-    }public void finish (View view) {
+
+    }
+
+    public void endapp(View view) {
         finish();
         System.exit(0);
     }
