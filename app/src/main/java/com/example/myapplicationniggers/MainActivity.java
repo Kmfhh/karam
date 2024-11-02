@@ -12,20 +12,35 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-private EditText X ;
+    private EditText etName, etYear;
+    private TextView tvShowDetails;
+    private String nam,details;
+    private int year;
+
     @Override
+    @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        X = findViewById(R.id.Text) ;
-    }
-    public  void changetext (View view) {
-        X.setText(" my first class ");
+        etName = findViewById(R.id.etName);
+
+        etYear = findViewById(R.id.etYear);
+
+        tvShowDetails = findViewById(R.id.textView);
 
     }
 
-    public void endapp(View view) {
-        finish();
-        System.exit(0);
-    }
+    public void shoDetails(View view) {
+        if(etName.getText().toString().isEmpty() || etYear.getText().toString().isEmpty())
+        {
+            Toast.makeText(this, "pleas fill in fieled.. ", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            nam= etName.getText().toString();
+            year= Integer.parseInt(etYear.getText().toString());
+            int age = 2024 -year;
+            details ="welcome "+ nam+"\nYour age is: "+age;
+            tvShowDetails.setText(details);
+        }
+    }
 }
