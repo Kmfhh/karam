@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">’My Application NIggers</string>
+    <string name="_1_11_2024">1/11/2024</string>
+    <string name="cool">cool</string>
+    <string name="x">-</string>
+    <string name="y">+</string>
+    <string name="mode">Mode</string>
+    <string name="on_off">On/Off</string>
+    <string name="temperature_20_c">Temperature: 20°C</string>
+    <string name="mode_off">Mode: Off</string>
 </resources>
